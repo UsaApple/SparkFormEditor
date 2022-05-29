@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6FF89CD-ECCE-46A3-9B7A-C5C0A8A6C560}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkFormEditor</RootNamespace>
+    <AssemblyName>SparkFormEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\发布目录\apps\TRT.NurseForm\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassObject\Win32Api.cs" />
+    <Compile Include="Controls\Other\PassWordForm.Designer.cs">
+      <DependentUpon>PassWordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_Attach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_Attach.Designer.cs">
+      <DependentUpon>Frm_Attach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="FuncForms\Frm_SignLoginEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SignLoginEx.Designer.cs">
+      <DependentUpon>Frm_SignLoginEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EntXmlModel.cs" />
+    <Compile Include="Structs\Struct.cs" />
+    <Compile Include="Editor\SparkFormEditor_Print.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor_Gdi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor_Internal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor_Tool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditBaseInfo.Designer.cs">
+      <DependentUpon>Frm_EditBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditHistory.Designer.cs">
+      <DependentUpon>Frm_EditHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditPageOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_EditPageOrder.designer.cs">
+      <DependentUpon>Frm_EditPageOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormEditMultiLineRow\FormEditRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormEditMultiLineRow\FormEditRow.designer.cs">
+      <DependentUpon>FormEditRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Flags.cs" />
+    <Compile Include="Controls\FormEditMultiLineRow\TextBoxWKeyBoard\HoverKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormEditMultiLineRow\TextBoxWKeyBoard\HoverNumPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormEditMultiLineRow\TextBoxWKeyBoard\MessageFilter.cs" />
+    <Compile Include="Controls\FormEditMultiLineRow\TextBoxWKeyBoard\TextBoxWKeyBoard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\ISealedBook.cs" />
+    <Compile Include="Interface\IWidget.cs" />
+    <Compile Include="FuncForms\Frm_MergeCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_MergeCell.Designer.cs">
+      <DependentUpon>Frm_MergeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EntPatientInfo.cs" />
+    <Compile Include="Model\EntUserInfo.cs" />
+    <Compile Include="ClassObject\BackUp.cs" />
+    <Compile Include="ClassObject\BatchMobileNursing.cs" />
+    <Compile Include="ClassObject\patientsListView.cs" />
+    <Compile Include="ClassObject\FontSize.cs" />
+    <Compile Include="ClassObject\Help\CheckHelp.cs" />
+    <Compile Include="ClassObject\GlobalVariable.cs" />
+    <Compile Include="ClassObject\Comm.cs" />
+    <Compile Include="ClassObject\DataGridViewColumnSelector.cs" />
+    <Compile Include="ClassObject\RichTextBoxToPicture.cs">
+    </Compile>
+    <Compile Include="ClassObject\Help\FileHelp.cs" />
+    <Compile Include="ClassObject\ImageTransition.cs" />
+    <Compile Include="ClassObject\IMEClass.cs" />
+    <Compile Include="ClassObject\IniClass.cs" />
+    <Compile Include="ClassObject\LogManager.cs" />
+    <Compile Include="ClassObject\Help\CSVHelp.cs" />
+    <Compile Include="ClassObject\Help\DateHelp.cs" />
+    <Compile Include="ClassObject\Help\GDiHelp.cs" />
+    <Compile Include="ClassObject\PageNo.cs" />
+    <Compile Include="ClassObject\SettingPrintPaper.cs" />
+    <Compile Include="ClassObject\RichTextBoxPrinter.cs" />
+    <Compile Include="ClassObject\ScriptReflect.cs" />
+    <Compile Include="ClassObject\Word.cs" />
+    <Compile Include="ClassObject\WordWrap.cs" />
+    <Compile Include="ClassObject\Help\TemplateHelp.cs" />
+    <Compile Include="ClassObject\SumGroup.cs" />
+    <Compile Include="ClassObject\TableClass\TableClass.cs" />
+    <Compile Include="Controls\Other\CheckBoxThreeState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\CheckBoxThreeState.designer.cs">
+      <DependentUpon>CheckBoxThreeState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\MyOpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\GeneticMapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\GeneticMapControl.Designer.cs">
+      <DependentUpon>GeneticMapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\SparkPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkPager.designer.cs">
+      <DependentUpon>SparkPager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckBoxEx\skinButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckBoxEx\SkinControls.cs" />
+    <Compile Include="Controls\Other\TransparentLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\TransparentLabel.Designer.cs">
+      <DependentUpon>TransparentLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\Vector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\Vector.designer.cs">
+      <DependentUpon>Vector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\VectorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\VectorControl.Designer.cs">
+      <DependentUpon>VectorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WriteHelp\AutocompleteItem.cs" />
+    <Compile Include="Controls\WriteHelp\AutocompleteItems.cs" />
+    <Compile Include="Controls\WriteHelp\AutocompleteListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WriteHelp\AutocompleteMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WriteHelp\AutocompleteMenuHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WriteHelp\EventArgs.cs" />
+    <Compile Include="Controls\WriteHelp\IAutocompleteListView.cs" />
+    <Compile Include="Controls\WriteHelp\ITextBoxWrapper.cs" />
+    <Compile Include="Controls\WriteHelp\Range.cs" />
+    <Compile Include="Controls\WriteHelp\TextBoxWrapper.cs" />
+    <Compile Include="FuncForms\Frm_PagePrintStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_PagePrintStatus.Designer.cs">
+      <DependentUpon>Frm_PagePrintStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\SparkPaperRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkPaperRecord.designer.cs">
+      <DependentUpon>SparkPaperRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_ParagraphContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_ParagraphContent.Designer.cs">
+      <DependentUpon>Frm_ParagraphContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ISignature.cs" />
+    <Compile Include="Controls\PopupHelp\ComplexPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\ComplexPopup.Designer.cs">
+      <DependentUpon>ComplexPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\ComplexPopupAssistant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\ComplexPopupAssistant.designer.cs">
+      <DependentUpon>ComplexPopupAssistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\ComplexPopupAssistantChild.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\ComplexPopupAssistantChild.designer.cs">
+      <DependentUpon>ComplexPopupAssistantChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Structs\GripBounds.cs" />
+    <Compile Include="Controls\PopupHelp\NativeMethods.cs" />
+    <Compile Include="Controls\PopupHelp\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PopupHelp\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\SparkFormEditor.designer.cs">
+      <DependentUpon>SparkFormEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassObject\Consts.cs" />
+    <Compile Include="ClassObject\Help\HelpClass.cs" />
+    <Compile Include="ClassObject\TextBoxLines.cs" />
+    <Compile Include="Controls\Other\BorderColorLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\BorderColorLabel.designer.cs">
+      <DependentUpon>BorderColorLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\CheckBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\CheckBoxExtended.Designer.cs">
+      <DependentUpon>CheckBoxExtended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\ComboBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\ComboBoxExtended.Designer.cs">
+      <DependentUpon>ComboBoxExtended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintControl\CoolPrintPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PrintControl\CoolPrintPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PrintControl\CoolPrintPreviewDialog.designer.cs">
+      <DependentUpon>CoolPrintPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrintControl\PageImageList.cs" />
+    <Compile Include="Controls\Other\PassWordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\RichTextBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\RichTextBoxExtended.designer.cs">
+      <DependentUpon>RichTextBoxExtended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\TransparentRTB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\TransparentRTB.designer.cs">
+      <DependentUpon>TransparentRTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\TransparentRTBExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\TransparentRTBExtended.designer.cs">
+      <DependentUpon>TransparentRTBExtended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Other\LabelExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\LabelExtended.Designer.cs">
+      <DependentUpon>LabelExtended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SelectConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SelectConfirm.designer.cs">
+      <DependentUpon>Frm_SelectConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SetPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SignLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SignLogin.Designer.cs">
+      <DependentUpon>Frm_SignLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_Sum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_Sum.Designer.cs">
+      <DependentUpon>Frm_Sum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SumTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncForms\Frm_SumTime.Designer.cs">
+      <DependentUpon>Frm_SumTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassObject\TableClass\RecordInor.cs" />
+    <Compile Include="ClassObject\TableClass\RowInfor.cs" />
+    <Compile Include="ClassObject\TableClass\ColumnInfor.cs" />
+    <Compile Include="ClassObject\TableClass\CellInfor.cs" />
+    <Compile Include="ClassObject\TableClass\Line.cs" />
+    <Compile Include="ClassObject\TableClass\TableInfor.cs" />
+    <Compile Include="ClassObject\TableClass\RowForeColors.cs" />
+    <Compile Include="ClassObject\ToolStrip_LineColor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FuncForms\Frm_Attach.resx">
+      <DependentUpon>Frm_Attach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_EditBaseInfo.resx">
+      <DependentUpon>Frm_EditBaseInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_EditHistory.resx">
+      <DependentUpon>Frm_EditHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_EditPageOrder.resx">
+      <DependentUpon>Frm_EditPageOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormEditMultiLineRow\FormEditRow.resx">
+      <DependentUpon>FormEditRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_MergeCell.resx">
+      <DependentUpon>Frm_MergeCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\CheckBoxThreeState.resx">
+      <DependentUpon>CheckBoxThreeState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\ComboBoxExtended.resx">
+      <DependentUpon>ComboBoxExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\LabelExtended.resx">
+      <DependentUpon>LabelExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_SignLoginEx.resx">
+      <DependentUpon>Frm_SignLoginEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\SparkPager.resx">
+      <DependentUpon>SparkPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\Vector.resx">
+      <DependentUpon>Vector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\VectorControl.resx">
+      <DependentUpon>VectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WriteHelp\AutocompleteMenu.resx">
+      <DependentUpon>AutocompleteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_PagePrintStatus.resx">
+      <DependentUpon>Frm_PagePrintStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\SparkPaperRecord.resx">
+      <DependentUpon>SparkPaperRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_ParagraphContent.resx">
+      <DependentUpon>Frm_ParagraphContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupHelp\ComplexPopup.resx">
+      <DependentUpon>ComplexPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupHelp\ComplexPopupAssistant.resx">
+      <DependentUpon>ComplexPopupAssistant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupHelp\ComplexPopupAssistantChild.resx">
+      <DependentUpon>ComplexPopupAssistantChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PopupHelp\Popup.resx">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\SparkFormEditor.resx">
+      <DependentUpon>SparkFormEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\BorderColorLabel.resx">
+      <DependentUpon>BorderColorLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PrintControl\CoolPrintPreviewDialog.resx">
+      <DependentUpon>CoolPrintPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\PassWordForm.resx">
+      <DependentUpon>PassWordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\RichTextBoxExtended.resx">
+      <DependentUpon>RichTextBoxExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\TransparentRTB.resx">
+      <DependentUpon>TransparentRTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Other\TransparentRTBExtended.resx">
+      <DependentUpon>TransparentRTBExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_SetPrint.resx">
+      <DependentUpon>Frm_SetPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_SignLogin.resx">
+      <DependentUpon>Frm_SignLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_Sum.resx">
+      <DependentUpon>Frm_Sum.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CheckBoxEx\xp1_checkbox.png" />
+    <EmbeddedResource Include="FuncForms\Frm_SelectConfirm.resx">
+      <DependentUpon>Frm_SelectConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuncForms\Frm_SumTime.resx">
+      <DependentUpon>Frm_SumTime.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
